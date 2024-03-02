@@ -1,0 +1,103 @@
+@import '@radix-ui/colors/gray.css';
+@import '@radix-ui/colors/gray-dark.css';
+@import '@radix-ui/colors/gray-alpha.css';
+@import '@radix-ui/colors/gray-dark-alpha.css';
+
+/* * * * * * * * * * * * * * * * * * * */
+/*                                     */
+/*           Surface colors            */
+/*                                     */
+/* * * * * * * * * * * * * * * * * * * */
+
+:root,
+.light,
+.light-theme {
+  --gray-surface: #ffffffcc;
+
+  @supports (color: color(display-p3 1 1 1)) {
+    @media (color-gamut: p3) {
+      & {
+        --gray-surface: color(display-p3 1 1 1 / 0.8);
+      }
+    }
+  }
+}
+
+.dark,
+.dark-theme {
+  --gray-surface: #21212180;
+
+  @supports (color: color(display-p3 1 1 1)) {
+    @media (color-gamut: p3) {
+      & {
+        --gray-surface: color(display-p3 0.1255 0.1255 0.1255 / 0.5);
+      }
+    }
+  }
+}
+
+/* * * * * * * * * * * * * * * * * * * */
+/*                                     */
+/*          Gray 2 equivalent          */
+/*        for translucent panels       */
+/*                                     */
+/* * * * * * * * * * * * * * * * * * * */
+
+.dark,
+.dark-theme {
+  --gray-2-translucent: #1d1d1db3;
+
+  @supports (color: color(display-p3 1 1 1)) {
+    @media (color-gamut: p3) {
+      & {
+        --gray-2-translucent: color(display-p3 0.1137 0.1137 0.1137 / 0.7);
+      }
+    }
+  }
+}
+
+/* * * * * * * * * * * * * * * * * * * */
+/*                                     */
+/*           Step 9 contrast           */
+/*                                     */
+/* * * * * * * * * * * * * * * * * * * */
+
+:root {
+  --gray-9-contrast: white;
+}
+
+/* * * * * * * * * * * * * * * * * * * */
+/*                                     */
+/*           Map accent colors         */
+/*                                     */
+/* * * * * * * * * * * * * * * * * * * */
+[data-accent-color='gray'] {
+  --color-surface-accent: var(--gray-surface);
+
+  --accent-1: var(--gray-1);
+  --accent-2: var(--gray-2);
+  --accent-3: var(--gray-3);
+  --accent-4: var(--gray-4);
+  --accent-5: var(--gray-5);
+  --accent-6: var(--gray-6);
+  --accent-7: var(--gray-7);
+  --accent-8: var(--gray-8);
+  --accent-9: var(--gray-9);
+  --accent-9-contrast: var(--gray-9-contrast);
+  --accent-10: var(--gray-10);
+  --accent-11: var(--gray-11);
+  --accent-12: var(--gray-12);
+
+  --accent-a1: var(--gray-a1);
+  --accent-a2: var(--gray-a2);
+  --accent-a3: var(--gray-a3);
+  --accent-a4: var(--gray-a4);
+  --accent-a5: var(--gray-a5);
+  --accent-a6: var(--gray-a6);
+  --accent-a7: var(--gray-a7);
+  --accent-a8: var(--gray-a8);
+  --accent-a9: var(--gray-a9);
+  --accent-a10: var(--gray-a10);
+  --accent-a11: var(--gray-a11);
+  --accent-a12: var(--gray-a12);
+}
